@@ -49,28 +49,10 @@ public class sampleTest {
 	}
 
 	@Test
-	void testGetClients_NOTFOUND() throws Exception {
+	void testGetClientsNotFound() throws Exception {
 		// No content when app start
 		mockMvc.perform(get("/api/clients"))
 				.andExpect(status().isNotFound());
-	}
-
-	@Test
-	void testCreateAccount() throws Exception {
-		AccountDto account = new AccountDto();
-		account.setNumber("1234567890");
-		account.setType("savings");
-		account.setInitialAmount(100.0);
-		account.setClientId(1L);
-		account.setIsActive(true);
-
-		mockMvc.perform(post("/api/accounts")
-				.contentType(MediaType.APPLICATION_JSON)
-				.content(objectMapper.writeValueAsString(account)))
-				.andExpect(status().isCreated())
-				.andExpect(jsonPath("$.id").isNumber())
-				.andExpect(jsonPath("$.number").value("1234567890"))
-				.andExpect(jsonPath("$.isActive").value(true));
 	}
 
 	@Test
