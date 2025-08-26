@@ -1,0 +1,30 @@
+version: '3.8'
+
+networks:
+  devsu-app-network:
+    driver: bridge
+
+services:
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: client_service
+    ports:
+      - "8001:8001"
+    networks:
+      - devsu-app-network
+
+  account:
+    build:
+      context: ./account
+      dockerfile: Dockerfile
+    container_name: account_service
+    ports:
+      - "8000:8000"
+    environment:
+      - EXTERNAL_SERVICE_URL=http://client:8001
+    depends_on:
+      - client
+    networks:
+      - devsu-app-network
