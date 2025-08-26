@@ -8,15 +8,12 @@ RUN mvn dependency:go-offline -B
 COPY src ./src
 RUN mvn clean package -DskipTests
 
-# Stage 2: Crear la imagen final para ejecutar la aplicación
+# Stage 2: Create the final image
 FROM eclipse-temurin:11-jdk
 WORKDIR /app
 
-# Copiar el jar compilado desde la etapa build
 COPY --from=build /app/target/*.jar app.jar
 
-# Exponer el puerto de la aplicación
 EXPOSE 8000
 
-# Ejecutar la aplicación
 ENTRYPOINT ["java", "-jar", "app.jar"]
