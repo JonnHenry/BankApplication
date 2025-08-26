@@ -23,16 +23,17 @@ Client ws URL `EXTERNAL_SERVICE_URL`, default value is `http://localhost:8001`
 **Response Example (200 OK):**
 
 ```json
+
 {
-  "id": 1,
-  "dni": "0105476097",
-  "name": "Jonnathan",
-  "password": "123456789.",
-  "gender": "M",
-  "age": 21,
-  "address": "prueba@prueba.com",
-  "phone": "0984655221",
-  "isActive": true
+    "id": 1,
+    "dni": "0105476097",
+    "name": "Jonnathan",
+    "password": "123456789.",
+    "gender": "M",
+    "age": 21,
+    "address": "prueba@prueba.com",
+    "phone": "0984655221",
+    "isActive": true
 }
 ```
 
@@ -53,8 +54,28 @@ Client ws URL `EXTERNAL_SERVICE_URL`, default value is `http://localhost:8001`
 
 ```json
 [
-  {"id":1,"dni":"0105476097","name":"Jonnathan","isActive":true},
-  {"id":2,"dni":"0105476098","name":"Maria","isActive":true}
+    {
+        "id": 1,
+        "dni": "0105476099",
+        "name": "Jonnathan",
+        "password": "123456789.",
+        "gender": "M",
+        "age": 21,
+        "address": "prueba@prueba.com",
+        "phone": "0984655221",
+        "isActive": true
+    },
+    {
+        "id": 2,
+        "dni": "0105476098",
+        "name": "Jonnathan",
+        "password": "123456789.",
+        "gender": "M",
+        "age": 21,
+        "address": "prueba@prueba.com",
+        "phone": "0984655221",
+        "isActive": true
+    }
 ]
 ```
 
@@ -70,14 +91,14 @@ Client ws URL `EXTERNAL_SERVICE_URL`, default value is `http://localhost:8001`
 
 ```json
 {
-  "dni": "0105476097",
-  "name": "Jonnathan",
-  "password": "123456789.",
-  "gender": "M",
-  "age": 21,
-  "address": "prueba@prueba.com",
-  "phone": "0984655221",
-  "isActive": true
+	"dni": "0105476098",
+	"name": "Jonnathan",
+	"password": "123456789.",
+	"gender": "M",
+	"age": 21,
+	"address": "prueba@prueba.com",
+	"phone": "0984655221",
+	"isActive": true
 }
 ```
 
@@ -85,10 +106,15 @@ Client ws URL `EXTERNAL_SERVICE_URL`, default value is `http://localhost:8001`
 
 ```json
 {
-  "id": 1,
-  "dni": "0105476097",
-  "name": "Jonnathan",
-  "isActive": true
+    "id": 2,
+    "dni": "0105476098",
+    "name": "Jonnathan",
+    "password": "123456789.",
+    "gender": "M",
+    "age": 21,
+    "address": "prueba@prueba.com",
+    "phone": "0984655221",
+    "isActive": true
 }
 ```
 
@@ -104,15 +130,15 @@ Client ws URL `EXTERNAL_SERVICE_URL`, default value is `http://localhost:8001`
 
 ```json
 {
-  "id": 1,
-  "dni": "0105476097",
-  "name": "JONNATHAN",
-  "password": "123456789.",
-  "gender": "M",
-  "age": 21,
-  "address": "prueba@prueba.com",
-  "phone": "0984655221",
-  "isActive": false
+    "id": 1,
+    "dni": "0105476099",
+    "name": "JONNATHAN",
+    "password": "123456789.",
+    "gender": "M",
+    "age": 21,
+    "address": "prueba@prueba.com",
+    "phone": "0984655221",
+    "isActive": false
 }
 ```
 
@@ -175,11 +201,11 @@ Client ws URL `EXTERNAL_SERVICE_URL`, default value is `http://localhost:8001`
 
 ```json
 {
-  "number": "0000000002",
-  "type": "SAVINGS",
-  "initialAmount": 100,
-  "isActive": true,
-  "clientId": 1
+    "number": "0000000002",
+    "type": "SAVINGS",
+    "initialAmount": 100,
+    "isActive": true,
+    "clientId": 1
 }
 ```
 
@@ -195,11 +221,11 @@ Client ws URL `EXTERNAL_SERVICE_URL`, default value is `http://localhost:8001`
 
 ```json
 {
-  "number": "0000000001",
-  "type": "SAVINGS",
-  "initialAmount": 200,
-  "isActive": true,
-  "clientId": 1
+	"number": "0000000001",
+	"type": "SAVINGS",
+	"initialAmount": 200,
+	"clientId": 1,
+	"isActive": true
 }
 ```
 
@@ -257,9 +283,9 @@ Client ws URL `EXTERNAL_SERVICE_URL`, default value is `http://localhost:8001`
 
 ```json
 {
-  "type": "DEPOSITS",
-  "amount": 10.203565,
-  "accountId": "1"
+    "type": "DEPOSITS",
+    "amount": 10.203565,
+    "accountId": "1"
 }
 ```
 
